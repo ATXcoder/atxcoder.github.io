@@ -80,9 +80,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/atxcoder"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/makergeek"
+    - label: "GitLab"
+      icon: "fab fa-brands fa-gitlab"
+      url: "https://gitlab.com/atxcoder_smart_home/home-assistant-config"
 
 defaults:
   # _posts
