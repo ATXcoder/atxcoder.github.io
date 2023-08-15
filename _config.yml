@@ -13,12 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Tom's Blog
+title: Blog of Tom
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  The awesome blog of Thomas Sloan.
 twitter_username: thomassloan
 github_username: ATXcoder
 minimal_mistakes_skin: default
@@ -28,13 +26,20 @@ search: true
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
-permalink: /:categories/:title/
+#permalink: /:categories/:title/
+permalink: /:year/:month/:day/:title
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/Chicago # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
   - _pages
+
+
+#collections:
+#  ha_dashboard:
+#    output: true
+#    permalink: "/ha-dashboard/:path/"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -60,11 +65,11 @@ plugins:
 author:
   name   : "Thomas Sloan"
   avatar : "/assets/images/Avatar200.png"
-  bio    : "A Dad, Web Developer, and a DIY and Smart Home enthusiast"
+  bio    : "A Dad, Web Developer,and Smart Home enthusiast"
   links:
-    - label: "Website"
+    - label: "Home Assistant Setup"
       icon: "fas fa-fw fa-link"
-      url: "https://thomassloan.net"
+      url: "https://gitlab.com/atxcoder_smart_home/home-assistant-config"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/thomassloan"
@@ -80,9 +85,6 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/atxcoder"
-    - label: "GitLab"
-      icon: "fab fa-brands fa-gitlab"
-      url: "https://gitlab.com/atxcoder_smart_home/home-assistant-config"
 
 defaults:
   # _posts
@@ -110,3 +112,6 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+mermaid:
+ src: "/assets/mermaid.min.js"

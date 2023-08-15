@@ -1,4 +1,6 @@
 main:
+  - title: "Home Assistant"
+    url: /home-assistant/
   - title: "Posts"
     url: /posts/
   - title: "Categories"
@@ -7,3 +9,7 @@ main:
     url: /tags/
   - title: "About"
     url: /about/
+
+ha-dashboard:
+  - title: "Part 1 - HA Dashboard: Introduction and Setup"
+    url: /2022/03/20/ha-dashboard-config-1

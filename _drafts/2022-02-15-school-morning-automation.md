@@ -3,7 +3,7 @@ Title: School Morning Automation
 excerpt: "A nice detail screen and automation to keep us all on track on school mornings"
 classes: wide
 categories:
-- home assistant
+- Home Assistant
 tags:
 - automation
 - dashboard
