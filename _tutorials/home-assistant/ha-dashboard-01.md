@@ -1,6 +1,9 @@
 ---
+date: 2023-03-20
 title: "Part 1 - HA Dashboard: Introduction and Set Up"
 toc: true
+sidebar: 
+  nav: "ha-dashboard"
 excerpt: The first part in a series on how I built my Home Assistant Dashboard with UI Lovelace Minimalist.
 header:
   image: assets\images\home-assistant\dashboard.png
@@ -21,13 +24,12 @@ gallery:
     image_path: /assets/images/dashboard-security.png
     alt: security
     title: security
-category:
-  - Home Assistant
+category: Home Assistant
 tags:
   - dashboard
 ---
 
-# Home Assistant Dashboard
+## Overview
 
 **NOTE:** Check out my [Gitlab](https://gitlab.com/atxcoder_smart_home/home-assistant-config) Repo for latest version of my Home Assistant and Dashboard configurations.
 {: .notice--info}
@@ -52,7 +54,7 @@ I use the desktop version of [Visual Studio Code](https://code.visualstudio.com/
 
 ## Setup a Tablet View (optional)
 
-This step is completely optional, but I highly recommend it if you are using a wall-mounted tablet (or really any device) to display your dashboard. It's a free feature built into Google Chrome and Microsoft Edge that allows you to simulate a device. Since I code on my laptop in my office and my tablet is downstairs in the living room, this helps me to see what that dashboard looks like and how it acts without me having to go downstairs and mess with the tablet. I have a complete tutorial [here]({% post_url 2022-02-25-simulated-devices %}) on how to set this feature up.
+This step is completely optional, but I highly recommend it if you are using a wall-mounted tablet (or really any device) to display your dashboard. It's a free feature built into Google Chrome and Microsoft Edge that allows you to simulate a device. Since I code on my laptop in my office and my tablet is downstairs in the living room, this helps me to see what that dashboard looks like and how it acts without me having to go downstairs and mess with the tablet. I have a complete tutorial [here]() on how to set this feature up.
 
 ## Install UI Minimalist
 

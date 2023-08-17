@@ -1,9 +1,8 @@
 ---
+date: 2023-03-21
 title: Simulated Devices
-excerpt: Learn how to set up simulated devices in Google Chrome to see how your Home
-  Assistant dashboard looks on different devices
-categories:
-  - Home Assistant
+excerpt: Learn how to set up simulated devices in Google Chrome to see how your Home Assistant dashboard looks on different devices
+category: Other
 tags:
   - dashboard
 ---

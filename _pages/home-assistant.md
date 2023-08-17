@@ -1,10 +1,36 @@
 ---
-title: "Home Assistant Posts"
+title: "Home Assistant"
 layout: single
 permalink: /home-assistant/
 author_profile: true
+toc: true
 ---
 
+## Hardware
+
+List of smart home devices I use with Home Assistant
+
+<ul style="list-style: none;">
+{% for post in site.ha-hardware %}
+<li>
+    <a href="{{post.url}}">{{post.title}}</a> - {{post.excerpt}}
+</li>
+{% endfor %}
+</ul>
+
+## Software
+
+List of smart home software I use with Home Assistant
+
+<ul style="list-style: none;">
+{% for post in site.ha-software %}
+<li>
+    <a href="{{post.url}}">{{post.title}}</a> - {{post.excerpt}}
+</li>
+{% endfor %}
+</ul>
+
+## Posts
 <p> Posts having to do with Home Assistant</p>
 
 <ul style="list-style: none;">

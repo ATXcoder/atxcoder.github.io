@@ -1,10 +1,12 @@
 ---
 toc: true
+date: 2023-03-20
 title: "Part 2 - HA Dashboard: Mobile, Desktop, and the Home screen"
-excerpt: Part 2 in a series on how I built my Home Assistant Dashboard with UI Lovelace
-  Minimalist. In this part, we cover the Mobile dashboard vs the Desktop
-  dashboard and will look at how to build out the Desktop Home screen.
-
+excerpt: Part 2 in a series on how I built my Home Assistant Dashboard with UI Lovelace Minimalist.
+sidebar:
+  nav: "ha-dashboard"
+header:
+  image: assets\images\home-assistant\dashboard.png
 gallery:
   - url: /assets/images/ha-dashboard-phone.png
     image_path: /assets/images/ha-dashboard-phone-thumb.png
@@ -16,10 +18,9 @@ gallery:
     title: Desktop Dashboard
 tags:
   - dashboard
-categories:
-  - Home Assistant
+category: Home Assistant
 ---
-{% include nav_list nav="ha-dashboard" %}
+
 
 This is the second part in a series on how I build my Home Assistant dashboard using [UI Lovelace Minimalist](https://ui-lovelace-minimalist.github.io/UI/). In this part we will be going over:
 - Mobile vs Desktop dashboards

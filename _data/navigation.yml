@@ -1,6 +1,8 @@
 main:
   - title: "Home Assistant"
     url: /home-assistant/
+  - title: "Tutorials"
+    url: /tutorials
   - title: "Posts"
     url: /posts/
   - title: "Categories"
@@ -11,5 +13,9 @@ main:
     url: /about/
 
 ha-dashboard:
-  - title: "Part 1 - HA Dashboard: Introduction and Setup"
-    url: /2022/03/20/ha-dashboard-config-1
+  - title: "Related Tutorials"
+    children:
+      - title: "Part 1 - HA Dashboard: Introduction and Setup"
+        url: /tutorials/home-assistant/ha-dashboard-01
+      - title: "Part 2 - HA Dashboard: Introduction and Setup"
+        url: /tutorials/home-assistant/ha-dashboard-02
