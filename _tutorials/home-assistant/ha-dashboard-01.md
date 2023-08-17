@@ -54,7 +54,7 @@ I use the desktop version of [Visual Studio Code](https://code.visualstudio.com/
 
 ## Setup a Tablet View (optional)
 
-This step is completely optional, but I highly recommend it if you are using a wall-mounted tablet (or really any device) to display your dashboard. It's a free feature built into Google Chrome and Microsoft Edge that allows you to simulate a device. Since I code on my laptop in my office and my tablet is downstairs in the living room, this helps me to see what that dashboard looks like and how it acts without me having to go downstairs and mess with the tablet. I have a complete tutorial [here]() on how to set this feature up.
+This step is completely optional, but I highly recommend it if you are using a wall-mounted tablet (or really any device) to display your dashboard. It's a free feature built into Google Chrome and Microsoft Edge that allows you to simulate a device. Since I code on my laptop in my office and my tablet is downstairs in the living room, this helps me to see what that dashboard looks like and how it acts without me having to go downstairs and mess with the tablet. I have a complete tutorial [here]({% link _tutorials/home-assistant/simulated-devices.md %}) on how to set this feature up.
 
 ## Install UI Minimalist
 

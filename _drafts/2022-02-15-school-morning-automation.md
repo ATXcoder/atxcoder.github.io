@@ -102,9 +102,95 @@ The final piece was creating some automations to:
  - Provide audible alerts at 15 and 5 minutes before it was time to leave for the bus, as well as a "time to leave for the bus" alert
 
 ### Change display dashboard
-The first automation ensures the dashboard changes from the standard home dashboard to the one I created for the school bus countdown. The YAML code is a little long, so I'll break it down bit-by-bit
+The first automation ensures the dashboard changes from the standard home dashboard to the one I created for the school bus countdown. The YAML code is a little long, so I'll break it down bit-by-bit.
 
-First, we trigger by checking to see if the current time is 15 minutes before the "bus arrival" time. Then in our trigger conditions, we make sure it is a workday (basically a weekday) and the calendar in Home Assistant that tracks the kids school holidays is in a *off* state
+The automation triggers when the current time equals `input_datetime.wake_up_time`. Conditions then check to make sure it is a weekday and not a school holiday. 
+
+{% highlight yaml linenos %}
+{% raw %}
+- id: '1619494346459'
+  alias: School Wakeup
+  description: Morning automation for a school day
+  trigger:
+  - platform: time
+    at: input_datetime.wake_up_time
+  condition:
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+  - condition: state
+    entity_id: calendar.school_holidays
+    state: 'off'
+{% endraw %}
+{% endhighlight %}
+
+Actions then run that turn on several lights in the house.
+
+{% highlight yaml linenos %}
+{% raw %}
+action:
+  - service: fully_kiosk.load_url
+    data:
+      url: http://10.0.10.9:8123/desktop-dashboard/school
+    target:
+      device_id: 17e783f5c55accf9ffe7b12c836bf0cf
+  - service: light.turn_on
+    target:
+      entity_id: light.front_porch_light
+    data: {}
+  - service: light.turn_on
+    target:
+      entity_id: light.thomas_nightstand
+    data:
+      brightness_pct: 5
+  - service: light.turn_on
+    target:
+      entity_id: light.living_room_lamp
+    data:
+      brightness_pct: 70
+  - service: light.turn_on
+    target:
+      entity_id: light.dinning_room_lights
+    data:
+      brightness_pct: 25
+{% endraw %}
+{% endhighlight %}
+
+Last, we wait 1 hour and 20 minutes after the last light turned on to start turning the lights back off. This is because the lights turn on roughly 1 hour before the bus arrives and the extra 20 minutes give my wife and I time to make coffee and get settled. Also, the sun is usually up by this time.
+
+{% highlight yaml linenos %}
+{% raw %}
+ - delay:
+      hours: 1
+      minutes: 20
+      seconds: 0
+      milliseconds: 0
+  - service: light.turn_off
+    target:
+      entity_id:
+      - light.thomas_nightstand
+      - light.front_porch_light
+    data: {}
+  - service: fully_kiosk.load_url
+    data:
+      url: http://10.0.10.9:8123/desktop-dashboard/home
+    target:
+      device_id: 17e783f5c55accf9ffe7b12c836bf0cf
+  - wait_for_trigger:
+    - platform: time
+      at: 07:30:00
+    timeout: 02:00:00
+  - service: light.turn_off
+    target:
+      entity_id: light.living_room_lamp
+    data: {}
+  mode: single
+{% endraw %}
+{% endhighlight %}
+
+### School bus arrival
+
+The next automation provides us with audible alerts about the school bus arriving. First, we trigger by checking to see if the current time is 15 minutes before the "bus arrival" time. Then in our trigger conditions, we make sure it is a workday (basically a weekday) and the calendar in Home Assistant that tracks the kids' school holidays is in a *off* state
 
 {% highlight yaml linenos %}
 {% raw %}
@@ -229,95 +315,3 @@ Finally, we wait 30 seconds (to make sure everything is done playing) and lower 
   mode: single
 {% endraw %}
 {% endhighlight %}
-
-Here is the full automation
-
-{% highlight yaml linenos %}
-{% raw %}
-- id: '1614743327502'
-  alias: School Bus Arriving
-  description: Announce the bus will be arriving in 15 minutes. Triggers 15 minutes
-    before "Bus Arrival" time (input_datetime.bus_arrival). It then waits 10 minutes
-    and announces the bus will be arriving in 5 minutes and what the current temperature
-    is outside or if there are any calendar events.
-  trigger:
-  - platform: template
-    value_template: '{% set time_now = as_timestamp(states(''sensor.date_time'').replace('','',
-      '''')) %} {% set bus_today = state_attr(''input_datetime.bus_arrival'',''timestamp'')
-      + (as_timestamp(states(''sensor.date''))-15*60) %}  {{time_now == bus_today}}'
-  condition:
-  - condition: state
-    entity_id: binary_sensor.workday_sensor
-    state: 'on'
-  - condition: state
-    entity_id: calendar.school_holidays
-    state: 'off'
-  action:
-  - service: media_player.volume_set
-    data:
-      volume_level: 1
-    target:
-      entity_id:
-      - media_player.kitchen_speaker
-      - media_player.tristian_bedroom
-  - service: tts.cloud_say
-    data:
-      entity_id: media_player.kitchen_speaker, media_player.master_bedroom_clock,
-        media_player.tristian_bedroom
-      message: Attention, the school bus will be arriving in 15 minutes.
-      cache: false
-  - delay:
-      hours: 0
-      minutes: 10
-      seconds: 0
-      milliseconds: 0
-  - choose:
-    - conditions:
-      - condition: state
-        entity_id: calendar.kids_school
-        state: 'on'
-      sequence:
-      - service: tts.cloud_say
-        data:
-          cache: false
-          entity_id: media_player.kitchen_speaker, media_player.master_bedroom_clock,media_player.tristian_bedroom
-          message: The school bus will be arriving in 5 minutes. Please review kids
-            school calendar for events occurring today.
-    - conditions:
-      - condition: state
-        entity_id: calendar.kids_school
-        state: 'off'
-      sequence:
-      - service: tts.cloud_say
-        data:
-          entity_id: media_player.kitchen_speaker, media_player.master_bedroom_clock,
-            media_player.tristian_bedroom
-          message: Attention, the school bus will be arriving in 5 minutes. It is
-            currently {{states('sensor.weather_temperature')}} degrees outside.
-    default: []
-  - delay:
-      hours: 0
-      minutes: 5
-      seconds: 0
-      milliseconds: 0
-  - service: tts.cloud_say
-    data:
-      cache: false
-      entity_id: media_player.kitchen_speaker, media_player.master_bedroom_clock,media_player.tristian_bedroom
-      message: It is now time to leave for the school bus.
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 30
-      milliseconds: 0
-  - service: media_player.volume_set
-    data:
-      volume_level: 0.7
-    target:
-      entity_id:
-      - media_player.kitchen_speaker
-      - media_player.master_bedroom_clock
-      - media_player.tristian_bedroom
-  mode: single
-  {% endraw %}
-  {% endhighlight %}
