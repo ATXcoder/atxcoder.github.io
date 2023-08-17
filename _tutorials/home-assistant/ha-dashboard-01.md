@@ -24,7 +24,9 @@ gallery:
     image_path: /assets/images/dashboard-security.png
     alt: security
     title: security
-category: Home Assistant
+categories: 
+  - Home Assistant
+  - Tutorial
 tags:
   - dashboard
 ---

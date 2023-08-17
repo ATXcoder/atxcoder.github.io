@@ -16,9 +16,12 @@ gallery:
     image_path: /assets/images/dashboard-home.png
     alt: desktop dashboard
     title: Desktop Dashboard
+categories: 
+  - Home Assistant
+  - Tutorial
+  
 tags:
   - dashboard
-category: Home Assistant
 ---
 
 
