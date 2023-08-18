@@ -6,7 +6,7 @@ excerpt: Part 2 in a series on how I built my Home Assistant Dashboard with UI L
 sidebar:
   nav: "ha-dashboard"
 header:
-  image: assets\images\home-assistant\dashboard.png
+  image: assets/images/home-assistant/dashboard.png
 gallery:
   - url: /assets/images/ha-dashboard-phone.png
     image_path: /assets/images/ha-dashboard-phone-thumb.png

@@ -6,7 +6,7 @@ sidebar:
   nav: "ha-dashboard"
 excerpt: The first part in a series on how I built my Home Assistant Dashboard with UI Lovelace Minimalist.
 header:
-  image: assets\images\home-assistant\dashboard.png
+  image: assets/images/home-assistant/dashboard.png
 gallery:
   - url: /assets/images/dashboard-home.png
     image_path: /assets/images/dashboard-home.png
