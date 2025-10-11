@@ -21,3 +21,5 @@ Retrieves all your upcoming meetings for the next 7 days.
 Connects to Todoist.
 Pulls all your tasks for the next 7 days.
 Compares each Outlook meeting with Todoist tasks, and if a task with the same name as the Outlook meeting is not found, it creates one in Todoist.
+
+You can get the module from my Git repo [Outlook to Todoist](https://github.com/ATXcoder/Outlook-to-Todoist){:data-umami-event="Visit GitHub" target="_blank" rel="noopener" data-umami-event-url="https://github.com/ATXcoder/Outlook-to-Todoist"}

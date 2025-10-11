@@ -1,6 +1,6 @@
 ---
 title: "How 1Password CLI Changed the Way I Secure My PowerShell Scripts"
-date: 2025-10-09 10:00:00 -0600
+date: 2025-08-06
 categories: [Automation, Security]
 tags: [PowerShell, 1Password, CLI, DevOps, Scripting]
 description: >
@@ -10,9 +10,9 @@ image:
   alt: "1Password CLI and PowerShell automation"
 ---
 
-I’ve written a lot of PowerShell scripts over the years—some for quick fixes, others that still run in production today. And like most people, I’ve had moments where convenience won out over best practice. Hard coding a password “just this once,” or dropping an API key into an environment variable because it was easier than setting up something more secure. It worked… until I started thinking about what could happen if one of those scripts ever leaked. That’s when I found [1Password’s CLI](https://developer.1password.com/docs/cli), and it completely changed how I handle credentials in my automation.
+I’ve written a lot of PowerShell scripts over the years—some for quick fixes, others that still run in production today. And like most people, I’ve had moments where convenience won out over best practice. Hard-coding a password “just this once,” or dropping an API key into an environment variable because it was easier than setting up something more secure. It worked… until I started thinking about what could happen if one of those scripts ever leaked. That’s when I found [1Password’s CLI](https://developer.1password.com/docs/cli), and it completely changed how I handle credentials in my automation.
 
-### Why Hardcoding or Env Vars Aren’t Safe
+### Why Hard-coding or Env Vars Aren’t Safe
 
 I won’t lie—using environment variables or plaintext passwords in scripts feels easy at first. You don’t need to think much, and your automation “just works.” But convenience comes at a cost:
 
@@ -24,7 +24,7 @@ Every time I reviewed old scripts, I cringed a little at what I had left lying a
 
 ### Enter 1Password CLI
 
-The 1Password Command Line Interface (CLI) lets you interact with your 1Password vault directly from scripts. No more hardcoding, no more risky environment variables. Instead, you can:
+The 1Password Command Line Interface (CLI) lets you interact with your 1Password vault directly from scripts. No more hard-coding, no more risky environment variables. Instead, you can:
 
 - Retrieve credentials on the fly with PowerShell.  
 - Keep all secrets in one secure, audited location.  
@@ -77,6 +77,6 @@ This workflow keeps both my scripts and my sanity intact.
 
 ### Final Thoughts
 
-I’ve learned the hard way that convenience can be costly when it comes to secrets. Hardcoding passwords or using environment variables might feel fine today, but they’re a ticking time bomb for tomorrow. 1Password CLI has become an essential part of my PowerShell toolkit, letting me automate securely without compromise.
+I’ve learned the hard way that convenience can be costly when it comes to secrets. Hard-coding passwords or using environment variables might feel fine today, but they’re a ticking time bomb for tomorrow. 1Password CLI has become an essential part of my PowerShell toolkit, letting me automate securely without compromise.
 
 If you’re still embedding credentials in your scripts, give [1Password CLI](https://developer.1password.com/docs/cli) a try. It might just change the way you think about automation, like it did for me.

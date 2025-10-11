@@ -19,14 +19,14 @@ title: Blog of Tom # the main title
 tagline: Ramblings of an old Dev Ops guy # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  Blog site for Thomas Sloan
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://thomassloan.net"
 
 github:
-  username: github_username # change to your GitHub username
+  username: Atxcoder # change to your GitHub username
 
 twitter:
   username: twitter_username # change to your Twitter username
@@ -38,11 +38,11 @@ social:
   email: example@domain.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
+    - https://twitter.com/elderdevguy # change to your Twitter homepage
+    - https://github.com/atxcoder # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/thomas-sloan-23005734
 
 # Site Verification Settings
 webmaster_verifications:
