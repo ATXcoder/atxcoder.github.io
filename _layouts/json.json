@@ -6,9 +6,10 @@ layout: none
   {
     "title": {{ post.title | jsonify }},
     "url": {{ post.url | jsonify }},
+    "full_url":{{site.url}}{{post.url}}
     "date": {{ post.date | date_to_string | jsonify }},
     "publish_date":{{post.date|jsonify}},
-    "excerpt": {{ post.excerpt | strip_html | strip_newlines | jsonify }},
+    "excerpt": {{ post.description | strip_html | strip_newlines | jsonify }},
     "tags": {{ post.tags | jsonify }},
     "categories":{{post.categories | jsonify}}
   }{% unless forloop.last %},{% endunless %}
