@@ -5,7 +5,7 @@ date: 2025-06-12
 image: https://images.unsplash.com/photo-1609770231080-e321deccc34c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEwfHxzZWN1cml0eXxlbnwwfHx8fDE3NDYyMTY3MzF8MA&ixlib=rb-4.0.3&q=80&w=2000
 description: Understanding the difference between SharePoint Security Groups and Microsoft Security Groups is essential. While both help control who can access what, they serve very different roles.
 slug: sharepoint-security-groups-vs-microsoft-security-groups
-categories: [Software,SharePoint]
+categories: [Microsoft,SharePoint]
 tags: [security,groups,permissions]
 ---
 

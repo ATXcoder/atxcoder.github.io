@@ -2,7 +2,7 @@
 title: "How 1Password CLI Changed the Way I Secure My PowerShell Scripts"
 date: 2025-08-06
 categories: [Automation, Security]
-tags: [PowerShell, 1Password, CLI, DevOps, Scripting]
+tags: [powershell, 1password, cli, devops, scripting]
 description: >
   I’ve written my fair share of PowerShell scripts over the years, but it wasn’t until I stumbled onto 1Password’s CLI that I stopped worrying about where my secrets were hiding.
 image:

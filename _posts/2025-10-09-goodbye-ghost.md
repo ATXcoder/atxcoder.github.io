@@ -2,7 +2,7 @@
 title: 👻 Goodbye Ghost
 description: "Ghost is awesome, but just overkill for what I need"
 categories: [Blog,Posts] 
-tags: [general,Ghost,Jekyll]
+tags: [general,ghost,jekyll]
 ---
 
 For the past year, I’ve been hosting my blog on [Ghost](https://ghost.org/), a powerful CMS. Recently, I spent a few hours upgrading to the latest version to access features like built-in analytics—and it got me thinking: *how much do I really use all of this?*
