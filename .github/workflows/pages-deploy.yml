@@ -71,3 +71,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Notify webhook
+        if: success()
+        run: |
+          curl -u "${{ secrets.WEBHOOK_USER }}:${{ secrets.WEBHOOK_PASSWORD }}" \
+            -k -X POST -H "Content-Type: application/json" \
+            -d '{"status":"success","url":"${{ steps.deployment.outputs.page_url }}"}' \
+            https://n8n.tsloan82.duckdns.org/webhook/2cf5498a-df0e-46d2-b432-4e359700c9cf
