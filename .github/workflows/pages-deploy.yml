@@ -78,4 +78,4 @@ jobs:
           curl -u "${{ secrets.WEBHOOK_USER }}:${{ secrets.WEBHOOK_PASSWORD }}" \
             -k -X POST -H "Content-Type: application/json" \
             -d '{"status":"success","url":"${{ steps.deployment.outputs.page_url }}"}' \
-            https://n8n.tsloan82.duckdns.org/webhook/2cf5498a-df0e-46d2-b432-4e359700c9cf
+            https://n8n.tsloan82.duckdns.org:3852/webhook/2cf5498a-df0e-46d2-b432-4e359700c9cf
