@@ -14,12 +14,12 @@ timezone: America/Chicago
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Blog of Tom # the main title
+title: Elder Dev Guy # the main title
 
 tagline: Ramblings of an old Dev Ops guy # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Blog site for Thomas Sloan
+  Blog site for Thomas Sloan, the Elder Dev Guy
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -98,7 +98,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: assets/img/my-profile-pic.jpg
+avatar: assets/blog-pic_112.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
