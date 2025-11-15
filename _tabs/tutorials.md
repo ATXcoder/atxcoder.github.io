@@ -1,6 +1,6 @@
 ---
 layout: custom/tutorials
 icon: fas fa-university
-order: 5
+order: 1
 ---
 

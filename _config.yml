@@ -14,9 +14,9 @@ timezone: America/Chicago
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Elder Dev Guy # the main title
+title: Codes with Coffee # the main title
 
-tagline: Ramblings of an old Dev Ops guy # it will display as the subtitle
+tagline: Building things one sip at a time. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Blog site for Thomas Sloan, the Elder Dev Guy
@@ -98,7 +98,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: assets/blog-pic_112.png
+avatar: assets/blog-pic_112-2.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
@@ -119,13 +119,13 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
+    repo: "atxcoder/atxcoder.github.io"
+    repo_id: "R_kgDOP8BzZQ"
+    category: "Announcements"
+    category_id: "DIC_kwDOP8BzZc4Cx01j"
     mapping: # optional, default to 'pathname'
     strict: # optional, default to '0'
-    input_position: # optional, default to 'bottom'
+    input_position: "top"
     lang: # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
 
@@ -174,6 +174,10 @@ collections:
     output: true
     sort_by: order
     permalink: /:collection/:path/:title
+  flows:
+    output: true
+    sort_by: order
+    permalink: /:collection/:title
 
 defaults:
   - scope:
@@ -190,6 +194,7 @@ defaults:
       path: _drafts
     values:
       comments: false
+      toc: true
   - scope:
       path: ""
       type: tabs # see `site.collections`
