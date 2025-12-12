@@ -1,6 +1,6 @@
 # The Site Configuration
 
-future: true
+future: false
 
 # Import the theme
 theme: jekyll-theme-chirpy
