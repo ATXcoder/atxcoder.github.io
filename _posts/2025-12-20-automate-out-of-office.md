@@ -2,9 +2,9 @@
 title: Automate Your Outlook Out of Office
 image: /assets/img/tutorials/automatic-out-of-office/preview_image.jpg
 description: Use Power Automate to automatically schedule your Outlook Out of Office whenever it detects an upcoming Out of Office appointment on your calendar.
-categories: [Automation,Power Automate]
+categories: [Automation,Power Platform]
 cup_level: 1
-tags: [power-automate,outlook,automation,flow]
+tags: [power-automate,outlook,automation,flow,microsoft-365]
 ---
 
 In most workplaces, if you plan to be out of office, you need to remember to turn on your Outlook Out of Office replies. This feature automatically replies to anyone who emails you with a message letting them know you're away. You can customize the message, set start and end times for the replies, and specify whether to send replies to internal recipients only or to external recipients as well.

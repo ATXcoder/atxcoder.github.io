@@ -5,8 +5,8 @@ date: 2025-06-12
 image: https://images.unsplash.com/photo-1609770231080-e321deccc34c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEwfHxzZWN1cml0eXxlbnwwfHx8fDE3NDYyMTY3MzF8MA&ixlib=rb-4.0.3&q=80&w=2000
 description: Understanding the difference between SharePoint Security Groups and Microsoft Security Groups is essential. While both help control who can access what, they serve very different roles.
 slug: sharepoint-security-groups-vs-microsoft-security-groups
-categories: [Microsoft,SharePoint]
-tags: [security,groups,permissions]
+categories: [Platform Deep Dives,Microsoft 365]
+tags: [security,groups,permissions,microsoft-365]
 ---
 
 ## What Are SharePoint Security Groups?
@@ -40,15 +40,15 @@ You can use Microsoft Security Groups to control access to:
 ## Comparison Table
 <!--kg-card-begin: html-->
 
-| Feature | SharePoint Security Groups | Microsoft Security Groups |
-| --- | --- | --- |
-| **Scope** | Single SharePoint site | Microsoft 365-wide |
-| **Managed In** | SharePoint UI | Entra ID |
-| **Membership Types** | Users, M365 Groups | Users, Devices (Static or Dynamic) |
-| **Best For** | Site-specific permissions | Org-wide or multi-site roles |
-| **Custom Roles** | Yes (via SharePoint permissions) | No (mapped roles needed in SharePoint) |
-| **Supports Nested Groups** | Partial | Yes |
-| **Self-Service** | Yes (by site owners) | No (usually IT-managed) |
+| Feature                    | SharePoint Security Groups       | Microsoft Security Groups              |
+| -------------------------- | -------------------------------- | -------------------------------------- |
+| **Scope**                  | Single SharePoint site           | Microsoft 365-wide                     |
+| **Managed In**             | SharePoint UI                    | Entra ID                               |
+| **Membership Types**       | Users, M365 Groups               | Users, Devices (Static or Dynamic)     |
+| **Best For**               | Site-specific permissions        | Org-wide or multi-site roles           |
+| **Custom Roles**           | Yes (via SharePoint permissions) | No (mapped roles needed in SharePoint) |
+| **Supports Nested Groups** | Partial                          | Yes                                    |
+| **Self-Service**           | Yes (by site owners)             | No (usually IT-managed)                |
 
 <!--kg-card-end: html-->
 * * *

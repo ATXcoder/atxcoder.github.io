@@ -3,8 +3,8 @@ layout: post
 title: "Finding guest accounts in your SharePoint site"
 date: 2025-11-11 17:03:03
 permalink: "flows/:title"
-categories: [Automation, Power Automate]
-tags: [automation, power-automate, flow]
+categories: [Automation, Enterprise]
+tags: [automation, power-automate, flow,microsoft-365,sharepoint]
 toc: true
 cup_level: 2
 description: Using Power Automate to quickly find guest accounts that have access to your SharePoint site

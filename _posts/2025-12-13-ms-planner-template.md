@@ -1,11 +1,11 @@
 ---
 title: Create your own templates for Microsoft Planner
 description: Use Excel and Power Automate to create your own custom templates for Microsoft Planner
-categories: [Automation, Power Automate]
+categories: [Automation, Power Platform]
 toc: true
 cup_level: 3
 image: /assets/img/tutorials/ms-planner-from-excel/preview_image.png
-tags: [excel,automation,power-automate,microsoft-planner,flow]
+tags: [excel,automation,power-automate,microsoft-planner,flow,microsoft-365]
 ---
 
 I've talked before about using [Microsoft Planner]({% link _posts/2025-10-26-microsoft-planner.md %}) and how it is great for creating Kanban-style boards that are super easy to use and understand. It's a great tool for planning both small and large projects.

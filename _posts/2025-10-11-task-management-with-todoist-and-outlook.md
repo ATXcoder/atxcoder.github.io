@@ -2,8 +2,8 @@
 title: Streamlining Task Management with Todoist and Outlook
 description: How I use Todoist, Outlook, and a little bit of PowerShell to get all my meetings into Todoist.
 image: https://images.unsplash.com/photo-1649433391719-2e784576d044?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-categories: [Automation]
-tags: [todoist,powershell,outlook,productivity] 
+categories: [Tools & Tutorials, PowerShell & Scripts]
+tags: [todoist,powershell,outlook,productivity,automation] 
 ---
 
 I have been using Todoist to manage all my day-to-day tasks and meetings. It's an integral part of my routine, and to maximize its utility, I've been incorporating all my calendar events and meetings into it. Like many people, I use a Google calendar for personal and family events and an Outlook calendar for work-related events. While Google calendar easily syncs with Todoist, the challenge arose when I wanted to sync my Outlook calendar with Todoist, as it only allows syncing with one calendar at a time. Some workarounds involve subscribing to different calendars within one platform, but this wasn't an ideal solution for me.
