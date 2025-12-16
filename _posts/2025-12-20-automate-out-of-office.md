@@ -13,7 +13,7 @@ I always seemed to forget to turn mine on. While I can enable it using my smartp
 
 ## The Flow
 
-This automation is easy to set up and takes just a few minutes. We’ll build a Power Automate flow triggered when it detects a calendar event starting in 15 minutes. It will check if the event is marked as "out of office" and, if so, schedule your Out of Office replies to start and end with the event.
+This automation is easy to set up and takes just a few minutes. We’ll build a Power Automate flow triggered when it detects a calendar event starting in 30 minutes. It will check if the event is marked as "out of office" and, if so, schedule your Out of Office replies to start and end with the event.
 
 ## Trigger
 
@@ -33,8 +33,8 @@ Add the [Set up automatic replies](https://learn.microsoft.com/en-us/connectors/
 
 Set the action’s parameters as follows:
 
-- **Status**: Scheduled  
-- **External Audience**: None (this means replies will only be sent to internal recipients)
+- **Status**: "Scheduled" - This way the replies are only sent out between the start and end times. Outlook takes care of turning them off once the end time is reached.
+- **External Audience**: "None" - This means replies will only be sent to internal recipients.
 
 Under *Advanced Parameters*, set the following using dynamic content:
 

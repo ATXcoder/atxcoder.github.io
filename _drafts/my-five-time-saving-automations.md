@@ -4,3 +4,9 @@ description: "Five simple, real-world automations I personally use at work and a
 categories: [Automation, Productivity]
 tags: [automation, power-automate, n8n, node-red, productivity, workflows, it admin]
 ---
+
+## Outlook to Todoist
+
+## Automatic Outlook Out Of Office
+
+## Nightly Borgbase Backup
