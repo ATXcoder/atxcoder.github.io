@@ -187,7 +187,3 @@ It doesn’t make you nervous to open it.
 
 If you’re afraid to touch a workflow…  
 **It’s already technical debt.**
-
----
-
-Want a checklist or a follow-up on **refactoring automation safely**? Just ask.
