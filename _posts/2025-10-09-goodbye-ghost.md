@@ -1,6 +1,7 @@
 ---
 title: 👻 Goodbye Ghost
 description: "Ghost is awesome, but just overkill for what I need"
+type: post
 categories: [Blog,Posts] 
 tags: [general,ghost,jekyll]
 ---

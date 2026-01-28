@@ -1,6 +1,9 @@
 ---
 title: Why I Switched to Microsoft Planner for Team Productivity
 description: If you’ve ever felt overwhelmed keeping track of tasks across multiple projects, Microsoft Planner might just be the tool you didn’t know you needed. Here’s why I’ve started using it and how it keeps my team organized.
+content_stability: stable
+last_reviewed: 2025-10-26
+type: post
 image: /assets/img/ms-planner-01.png
 date: 2025-11-09 17:08:54
 categories: [Platform Deep Dives, Microsoft 365]

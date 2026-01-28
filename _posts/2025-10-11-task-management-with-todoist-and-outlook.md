@@ -1,6 +1,9 @@
 ---
 title: Streamlining Task Management with Todoist and Outlook
 description: How I use Todoist, Outlook, and a little bit of PowerShell to get all my meetings into Todoist.
+content_stability: high
+last_reviewed: 2025-10-11
+type: post
 image: https://images.unsplash.com/photo-1649433391719-2e784576d044?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 categories: [Tools & Tutorials, PowerShell & Scripts]
 tags: [todoist,powershell,outlook,productivity,automation] 

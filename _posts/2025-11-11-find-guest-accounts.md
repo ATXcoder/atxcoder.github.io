@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Finding guest accounts in your SharePoint site"
+content_stability: high
+last_reviewed: 2025-11-11
+type: tutorial
 date: 2025-11-11 17:03:03
 permalink: "flows/:title"
 categories: [Automation, Enterprise]
