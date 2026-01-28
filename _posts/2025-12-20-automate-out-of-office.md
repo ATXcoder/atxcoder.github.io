@@ -4,6 +4,7 @@ image: /assets/img/tutorials/automatic-out-of-office/preview_image.jpg
 description: Use Power Automate to automatically schedule your Outlook Out of Office whenever it detects an upcoming Out of Office appointment on your calendar.
 content_stability: high
 last_reviewed: 2025-12-20
+type: tutorial
 categories: [Automation,Power Platform]
 cup_level: 1
 tags: [power-automate,outlook,automation,flow,microsoft-365]

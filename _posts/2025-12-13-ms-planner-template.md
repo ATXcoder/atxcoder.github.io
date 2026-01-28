@@ -3,6 +3,7 @@ title: Create your own templates for Microsoft Planner
 description: Use Excel and Power Automate to create your own custom templates for Microsoft Planner
 content_stability: high
 last_reviewed: 2025-12-13
+type: tutorial
 categories: [Automation, Power Platform]
 toc: true
 cup_level: 3
