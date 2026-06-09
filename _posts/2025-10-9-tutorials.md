@@ -1,7 +1,7 @@
 ---
 title: 📰 Site News and Developments
 description: Latest news and developments for this site.
-pin: true
+pin: false
 type: post
 categories: [Blog,Posts]
 tags: [news, general]
