@@ -1,7 +1,7 @@
 ---
 title: "Long Live SharePoint Rules"
 description: SharePoint alerts are set to stop working in July 2026. Learn how you can use SharePoint rules instead.
-type: Posts
+type: post
 content_stability: High
 last_reviewed: 2026-06-10
 image: assets/img/posts/2026-06-10/postimage.png
