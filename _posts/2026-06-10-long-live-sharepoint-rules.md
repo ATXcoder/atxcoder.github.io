@@ -4,7 +4,9 @@ description: SharePoint alerts are set to stop working in July 2026. Learn how y
 type: post
 content_stability: High
 last_reviewed: 2026-06-10
-image: assets/img/posts/2026-06-10/postimage.png
+image: 
+  path: /assets/img/posts/2026-06-10/postimage.png
+  alt: Long Live SharePoint Rules
 categories: [Blog,Posts]
 tags: [sharepoint,productivity,automation,no-code]
 ---

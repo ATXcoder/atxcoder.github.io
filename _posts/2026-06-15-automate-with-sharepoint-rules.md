@@ -4,9 +4,7 @@ description: SharePoint rules can easily replace alerts and send you notificatio
 type: post
 content_stability: High
 last_reviewed: 2026-06-15
-image:
-  path: /assets/img/posts/2026-06-10/postimage.png
-  alt: Long Live SharePoint Rules
+image: assets/img/posts/2026-06-15/postImage.png
 categories: [Blog,Posts]
 tags: [sharepoint,productivity,automation,no-code]
 ---
