@@ -46,14 +46,15 @@ script_includes:
         {% include datetime.html date=page.date tooltip=true lang=lang %}
       </span>
 
-      <!-- lastmod date -->
-      {% if page.last_modified_at and page.last_modified_at != page.date %}
+      {% assign published_ts = page.date | date: '%s' %}
+      {% assign modified_ts = page.last_modified_at | date: '%s' %}
+
+      {% if page.last_modified_at and modified_ts > published_ts %}
         <span>
           {{ site.data.locales[lang].post.updated }}
           {% include datetime.html date=page.last_modified_at tooltip=true lang=lang %}
         </span>
       {% endif %}
-
       {% comment %}
         {% if page.image %}
           {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
