@@ -5,6 +5,8 @@ content_stability: high
 last_reviewed: 2025-11-11
 type: tutorial
 date: 2025-11-11 17:03:03
+image:
+  path: /assets/img/posts/2025-10-11/post-image.png
 permalink: "flows/:title"
 categories: [Automation, Enterprise]
 tags: [automation, power-automate, flow,microsoft-365,sharepoint]
