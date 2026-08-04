@@ -6,7 +6,7 @@ tags: [powershell, 1password, cli, devops, scripting]
 description: >
   I’ve written my fair share of PowerShell scripts over the years, but it wasn’t until I stumbled onto 1Password’s CLI that I stopped worrying about where my secrets were hiding.
 image:
-  path: /assets/img/1password-post.webp
+  path: /assets/img/posts/securing-passwords-in-scripts-with-1password/1password-post.webp
   alt: "1Password CLI and PowerShell automation"
 ---
 

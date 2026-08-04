@@ -3,7 +3,9 @@ title: 📰 Site News and Developments
 description: Latest news and developments for this site.
 pin: false
 type: post
-categories: [Blog,Posts]
+content_stability: Stable
+last_reviewed: 2025-10-09
+categories: [Site News]
 tags: [news, general]
 ---
 

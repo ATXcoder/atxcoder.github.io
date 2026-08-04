@@ -2,7 +2,9 @@
 title: 👻 Goodbye Ghost
 description: "Ghost is awesome, but just overkill for what I need"
 type: post
-categories: [Blog,Posts] 
+content_stability: Stable
+last_reviewed: 2025-10-09
+categories: [Site News]
 tags: [general,ghost,jekyll]
 ---
 

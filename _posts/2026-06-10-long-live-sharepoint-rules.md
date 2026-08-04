@@ -2,12 +2,12 @@
 title: "Long Live SharePoint Rules"
 description: SharePoint alerts are set to stop working in July 2026. Learn how you can use SharePoint rules instead.
 type: post
-content_stability: High
+content_stability: Stable
 last_reviewed: 2026-06-10
-image: 
-  path: /assets/img/posts/2026-06-10/postimage.png
+image:
+  path: /assets/img/posts/long-live-sharepoint-rules/postimage.png
   alt: Long Live SharePoint Rules
-categories: [Blog,Posts]
+categories: [Microsoft 365, Automation]
 tags: [sharepoint,productivity,automation,no-code]
 ---
 
@@ -27,28 +27,28 @@ Let's create a rule in a document library that runs when an item is modified.
 
 Navigate to your library and click on **Integrate > Rules**
 
-![rules](/assets/img/posts/2026-06-10/1.png)
+![rules](/assets/img/posts/long-live-sharepoint-rules/1.png)
 
 We need to define a trigger action. In our example, we are going to fire this rule anytime an item in our library is modified. So we will select **A file or metadata is modified**
 
-![trigger](/assets/img/posts/2026-06-10/2.png)
+![trigger](/assets/img/posts/long-live-sharepoint-rules/2.png)
 
 Now we will define the conditions and actions of the rule. The rule is written in plain text, so it is easy to understand.
 
-![action-1](/assets/img/posts/2026-06-10/3.png)
+![action-1](/assets/img/posts/long-live-sharepoint-rules/3.png)
 
 For our example, we want the rule to fire anytime an item is modified. Click on the *if* drop-down and set it to *always*. We are going to leave the *send an email* action alone, but if you click on it, you can see you have a few options such as moving or copying the file. For now, we just want it to send us an email. That brings us to our final step, which is who to send the email to. If you click on the field, you will get a number of suggestions such as sending the email to the person who modified or created the item. The option we are going to pick is *Me*. This will send the email to you.
 
 Your final rule should look like this.
 
-![final rule](/assets/img/posts/2026-06-10/4.png)
+![final rule](/assets/img/posts/long-live-sharepoint-rules/4.png)
 
 There is a spot to add additional text to your email notification if you would like, but it is optional.
 
 Click on **Create** and your rule is now active and ready to notify you.
 
-![rules-list](/assets/img/posts/2026-06-10/5.png)
+![rules-list](/assets/img/posts/long-live-sharepoint-rules/5.png)
 
 Now if I update a document in my library where the rule is active, I get an email notification.
 
-![email](/assets/img/posts/2026-06-10/6.png)
+![email](/assets/img/posts/long-live-sharepoint-rules/6.png)

@@ -1,11 +1,13 @@
 ---
 title: "Why It’s Still Important to Learn No-Code Platforms in the Age of AI"
 description: "AI can write code, but no-code tools still help you build and automate things way faster in the real world. I break down why platforms like Power Automate and n8n are still a big deal for saving time, working better with non-developers, reducing integration risk, and adjusting quickly when business needs change."
-image: /assets/img/no-code-in-age-of-ai-banner.png
 type: post
-content_stability: stable
+content_stability: Stable
 last_reviewed: 2026-05-07
-categories: [Blog,Posts]
+image:
+  path: /assets/img/posts/five-reasons-why-no-code-is-still-worth-learning/no-code-in-age-of-ai-banner.png
+  alt: Why It’s Still Important to Learn No-Code Platforms in the Age of AI
+categories: [No-Code, AI]
 tags: [no-code,automation,power-automate,n8n,workflows,productivity,ai,microsoft-365]
 ---
 

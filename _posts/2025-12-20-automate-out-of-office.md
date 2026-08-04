@@ -1,12 +1,13 @@
 ---
 title: Automate Your Outlook Out of Office
-image: /assets/img/tutorials/automatic-out-of-office/preview_image.jpg
 description: Use Power Automate to automatically schedule your Outlook Out of Office whenever it detects an upcoming Out of Office appointment on your calendar.
-content_stability: high
+type: flow
+content_stability: Stable
 last_reviewed: 2025-12-20
-type: tutorial
-categories: [Automation,Power Platform]
-cup_level: 1
+image:
+  path: /assets/img/posts/automate-out-of-office/preview_image.jpg
+  alt: Automate Your Outlook Out of Office
+categories: [Automation, Microsoft 365]
 tags: [power-automate,outlook,automation,flow,microsoft-365]
 ---
 
@@ -22,17 +23,17 @@ This automation is easy to set up and takes just a few minutes. We’ll build a 
 
 Start by creating a new flow with the trigger [When an upcoming event is starting soon](https://learn.microsoft.com/en-us/connectors/office365/#when-an-upcoming-event-is-starting-soon-(v3)). This trigger polls your calendar every minute for events starting soon. You can configure how far ahead it looks; I have mine set to detect events starting in 30 minutes.
 
-![trigger parameters](/assets/img/tutorials/automatic-out-of-office/trigger-parameters.png)
+![trigger parameters](/assets/img/posts/automate-out-of-office/trigger-parameters.png)
 
 ## Actions
 
 For your first action, add a condition. This will check the event's "Show As" field. If it is "oof" (out of office), the flow will turn on your Out of Office replies. If it shows anything else, the flow ignores the event.
 
-![condition parameters](/assets/img/tutorials/automatic-out-of-office/condition-parameters.png)
+![condition parameters](/assets/img/posts/automate-out-of-office/condition-parameters.png)
 
 Add the [Set up automatic replies](https://learn.microsoft.com/en-us/connectors/office365/#set-up-automatic-replies-(v2)) action to the **True** branch of the condition.
 
-![true branch](/assets/img/tutorials/automatic-out-of-office/true-branch.png)
+![true branch](/assets/img/posts/automate-out-of-office/true-branch.png)
 
 Set the action’s parameters as follows:
 

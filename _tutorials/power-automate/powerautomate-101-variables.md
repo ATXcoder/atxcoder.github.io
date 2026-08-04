@@ -2,7 +2,7 @@
 layout: post
 toc: true
 date: 2025-07-16
-image: /assets/img/variable-box2.png
+image: /assets/img/posts/powerautomate-101-variables/variable-box2.png
 title: "Working with Variables"
 series: Power Automate 101
 slug: power-automate-101-working-with-variables
@@ -61,12 +61,12 @@ There are **three main actions** for working with variables:
 
 You define the name, type, and (optionally) a starting value.
 
-![image-2](assets/img/image-2.png)
+![image-2](assets/img/posts/powerautomate-101-variables/image-2.png)
 _Give your variable a Name, Type, and an Initial Value (optional)_
 
 > You usually place this at the beginning of your flow right after your Trigger.
 
-![image-1](assets/img/image-1.png)
+![image-1](assets/img/posts/powerautomate-101-variables/image-1.png)
 _Variables are typically initialized near the start of the flow_
 
 > Variables can not be intilized inside of for each loops.
@@ -77,22 +77,22 @@ _Variables are typically initialized near the start of the flow_
 
 ### 2. **Set Variable**  
 
-![iamge-4](assets/img/image-4.png)
+![iamge-4](assets/img/posts/powerautomate-101-variables/image-4.png)
 _Set variable action_
 
 Updates the variable to a new value — **replaces** the existing value. Select the variable you want to set from the drop-down list.
 
-![image-3](assets/img/image-3.png)
+![image-3](assets/img/posts/powerautomate-101-variables/image-3.png)
 * * *
 
 ### 3. **Increment / Decrement Variable**
 
 Adds or subtracts from the current value. Only works with **Integer** or **Float** variables.
 
-![image-5](assets/img/image-5.png) 
+![image-5](assets/img/posts/powerautomate-101-variables/image-5.png) 
 _Add 1 to the value of varAge_
 
-![image-6](assets/img/image-6.png)
+![image-6](assets/img/posts/powerautomate-101-variables/image-6.png)
 _Subtract 4 from the value of varAge_
 * * *
 
@@ -100,7 +100,7 @@ _Subtract 4 from the value of varAge_
 
 The append action lets you append a value to an **array** or **string** variable. In many cases, arrays are used to hold JSON objects.
 
-![image-7](assets/img/image-7.png)
+![image-7](assets/img/posts/powerautomate-101-variables/image-7.png)
 _Adding a JSON object to an array_
 * * *
 

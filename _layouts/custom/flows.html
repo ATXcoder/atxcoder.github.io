@@ -30,21 +30,7 @@ refactor: true
 
 <h1>Flows</h1>
 
-<p>Here you will find written tutorials on how to build and implement flows on a number of different platforms. Each flow is rated using my <a href="/coffee-meter">Coffee Mug Rating System</a> </p>
-
-{% comment %} <section class="posts-grid">
-{% for post in site.flows %}
-    <article class="post" >
-      <h2>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </h2>
-      {% if post.cup_level %}
-        <img src="assets/img/flow-cups/{{post.cup_level}}-cup-flow.png" w="150" h="100" style="border-radius: 15px;">
-      {% endif %}
-      <p>{{ post.description | strip_html | truncate: 160 }}</p>
-    </article>
-  {% endfor %}
-</section> {% endcomment %}
+<p>Here you will find short, focused walkthroughs for building and implementing automation flows on a number of different platforms.</p>
 
 {% assign posts_with_flow_tag = site.posts | where_exp: "item", "item.tags contains 'flow'" %}
 <section class="posts-grid">
@@ -53,9 +39,6 @@ refactor: true
       <h2>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </h2>
-      {% if post.cup_level %}
-        <img src="assets/img/flow-cups/{{post.cup_level}}-cup-flow.png" w="150" h="100" style="border-radius: 15px;">
-      {% endif %}
       <p>{{ post.description | strip_html | truncate: 160 }}</p>
     </article>
   {% endfor %}

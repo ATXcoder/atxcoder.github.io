@@ -1,18 +1,17 @@
 ---
-layout: post
 title: "Finding guest accounts in your SharePoint site"
-content_stability: high
+description: Using Power Automate to quickly find guest accounts that have access to your SharePoint site
+type: flow
+content_stability: Stable
 last_reviewed: 2025-11-11
-type: tutorial
 date: 2025-11-11 17:03:03
 image:
-  path: /assets/img/posts/2025-10-11/post-image.png
+  path: /assets/img/posts/find-guest-accounts/post-image.png
+  alt: Finding guest accounts in your SharePoint site
 permalink: "flows/:title"
-categories: [Automation, Enterprise]
-tags: [automation, power-automate, flow,microsoft-365,sharepoint]
+categories: [Automation, Microsoft 365]
+tags: [automation, power-automate, flow, microsoft-365, sharepoint]
 toc: true
-cup_level: 2
-description: Using Power Automate to quickly find guest accounts that have access to your SharePoint site
 ---
 
 In SharePoint, when you share a site, document, or list with someone outside your organization, that person becomes a guest. Behind the scenes, SharePoint leans on Azure Active Directory (AAD) to manage that guest account. So, they’re not just floating around in your site—they have a proper guest account in your Azure AD tenant.
@@ -25,7 +24,7 @@ Keeping track of guests can get tricky. You could dig through SharePoint groups 
 
 The trigger we'll use is manual. Add an input to capture the URL of the SharePoint site you want to scan for guests.
 
-![1](/assets/img/tutorials/find-guest-accounts/1.png)
+![1](/assets/img/posts/find-guest-accounts/1.png)
 
 ## Actions
 
@@ -33,23 +32,23 @@ The first action we'll use is the **Initialize variable** action. This built-in 
 
 Click on the plus sign under your trigger. On the left-hand side search for the **Initialize variable** action and add it to your flow. You will need to give it a name and pick the type of variable. For this flow we'll call it "guestList" and it will be an **array** variable.
 
-![var](/assets/img/tutorials/find-guest-accounts/array-variable-properties.png)
+![var](/assets/img/posts/find-guest-accounts/array-variable-properties.png)
 
  The next action to add is the [Send an HTTP request to SharePoint](https://learn.microsoft.com/en-us/connectors/sharepointonline/#send-an-http-request-to-sharepoint) action that uses the [SharePoint](https://learn.microsoft.com/en-us/connectors/sharepointonline) connector.
 
-![step-2](/assets/img/tutorials/find-guest-accounts/2.png)
+![step-2](/assets/img/posts/find-guest-accounts/2.png)
 
 For the *Parameters* of this action we are going to add the URL of the SharePoint site that you collected in the trigger. Start by clicking on the **Site Address** property. You should see a drop-down list of SharePoint sites. Scroll all the way to the bottom and select *Custom value*. Now click in the **Site Address** box again and a message should appear. Press "/" and select dynamic value.
 
-![step-3](/assets/img/tutorials/find-guest-accounts/3.png)
+![step-3](/assets/img/posts/find-guest-accounts/3.png)
 
 A list of previous actions and the trigger will show. Select the trigger ("Manually trigger a flow") and click on *See more* next to it.
 
-![4](/assets/img/tutorials/find-guest-accounts/4.png)
+![4](/assets/img/posts/find-guest-accounts/4.png)
 
 Select the "site_url", or whatever you named your trigger input.
 
-![4-1](/assets/img/tutorials/find-guest-accounts/4-1.png)
+![4-1](/assets/img/posts/find-guest-accounts/4-1.png)
 
 For the **Uri** enter the following exactly as shown including the forward slash as the start.
 
@@ -59,13 +58,13 @@ For the **Uri** enter the following exactly as shown including the forward slash
 
 You can leave everything else as-is and you should be left with an action that looks like this.
 
-![9](/assets/img/tutorials/find-guest-accounts/9.png)
+![9](/assets/img/posts/find-guest-accounts/9.png)
 
 If you want, you can test the flow now. Click on **Test** in the top right of the screen, choose "Manually", then **Save & Test** at the bottom. You may be prompted to connect your account — do so.
 
 You will see a box appear asking you to input the site address. It should look similar to this:
 
-![6](/assets/img/tutorials/find-guest-accounts/6.png)
+![6](/assets/img/posts/find-guest-accounts/6.png)
 
 Enter the address of the site collection. Click OK and the flow should run. If everything is successful, move on to the next step. Otherwise, review the steps above and make sure your trigger and action settings match.
 
@@ -78,15 +77,15 @@ If you click on the **Send an HTTP request to SharePoint** action and open **Out
 
 Now, we need to loop through each group and then through each user looking for external/guest users. Add a new action and search for **Control**. Add the **Apply to each** action.
 
-![11](/assets/img/tutorials/find-guest-accounts/11.png)
+![11](/assets/img/posts/find-guest-accounts/11.png)
 
 Click on the action to open its properties. Click in the input where it says "Select an output from the previous steps" and then click on the **function** icon.
 
-![16](/assets/img/tutorials/find-guest-accounts/16.png)
+![16](/assets/img/posts/find-guest-accounts/16.png)
 
 In the pop-up, click on **Dynamic content** and then select `Body` from the *Send an HTTP request to SharePoint*. This will add the response content from the *Send an HTTP request to SharePoint* node.
 
-![17](/assets/img/tutorials/find-guest-accounts/17.png)
+![17](/assets/img/posts/find-guest-accounts/17.png)
 
 Since we only want to loop through each group, we need to adjust the code to only look at the *results* array. Add the following:
 
@@ -96,7 +95,7 @@ Since we only want to loop through each group, we need to adjust the code to onl
 
 Once added, it should look like the image below.
 
-![18](/assets/img/tutorials/find-guest-accounts/18.png)
+![18](/assets/img/posts/find-guest-accounts/18.png)
 
 Click on **Update**.
 
@@ -104,11 +103,11 @@ Click on **Update**.
 
 Inside the **Apply to each** action we'll add another **Apply to each** action.
 
-![19](/assets/img/tutorials/find-guest-accounts/19.png)
+![19](/assets/img/posts/find-guest-accounts/19.png)
 
 Follow the steps as before, adding a function to the action. This time, instead of picking the output of a previous action, scroll to the bottom and select **Current item**. This means we are looking at the current item (in our case the SharePoint group).
 
-![14](/assets/img/tutorials/find-guest-accounts/14.png)
+![14](/assets/img/posts/find-guest-accounts/14.png)
 
 Now we need to update the code again to focus on just the users in the current SharePoint group we are looking at.
 
@@ -122,7 +121,7 @@ This code tells it to look at each result in the "results" array under "Users". 
 
 Now we can finally start looking for guest accounts. First, let's take a look at what *user* properties are available to us. Below is an example of a fake guest user I temporarily added to one of my SharePoint sites.
 
-![user-props](/assets/img/tutorials/find-guest-accounts/user-props.png)
+![user-props](/assets/img/posts/find-guest-accounts/user-props.png)
 
 There are a few properties here that identify this user as a guest:
 
@@ -138,11 +137,11 @@ Back in our flow, let's add another action: the **Condition** action. This is a 
 
 You need to add this action to the last **Apply to each** action that you added earlier.
 
-![20](/assets/img/tutorials/find-guest-accounts/20.png)
+![20](/assets/img/posts/find-guest-accounts/20.png)
 
 Click on "Condition" and then the "Choose a value" box in the Condition's properties. Like before, add a function and then add *Dynamic content*. Select the *Current item* from the **Apply to each 1**. The current item is the current user we are looking at in our loop.
 
-![21](/assets/img/tutorials/find-guest-accounts/21.png)
+![21](/assets/img/posts/find-guest-accounts/21.png)
 
 Update the code so it looks like this
 
@@ -154,7 +153,7 @@ Then click on *Add*.
 
 We need to check if the LoginName contains the string "#ext". Select `contains` in the dropdown list. Finally enter the string *#ext*. It should look like this
 
-![contains](/assets/img/tutorials/find-guest-accounts/contains.png)
+![contains](/assets/img/posts/find-guest-accounts/contains.png)
 
 ### Updating our variable
 
@@ -162,7 +161,7 @@ Recall the array variable we created at the very beginning of the flow. We will 
 
 Click the plus button in the *True* branch and add a new action called **Append to array variable**.
 
-![append-to-array](/assets/img/tutorials/find-guest-accounts/true-action.png)
+![append-to-array](/assets/img/posts/find-guest-accounts/true-action.png)
 
 In the properties select the array variable we created at the start of our flow. Enter the following in the *Value* field:
 
@@ -182,7 +181,7 @@ The `{` `}` mark the start and end of a JSON object.
 
 If you copied and pasted the above code into the value field, you should see something like this:
 
-![append-props](/assets/img/tutorials/find-guest-accounts/append-props.png)
+![append-props](/assets/img/posts/find-guest-accounts/append-props.png)
 
 ## Emailing the report
 
@@ -190,7 +189,7 @@ If we run the flow we will end up with a JSON array of objects — one for each 
 
 Add an action called **Create a CSV table** to the very end of your flow. Make sure you don't add it inside any loops.
 
-![csv-1](/assets/img/tutorials/find-guest-accounts/csv-1.png)
+![csv-1](/assets/img/posts/find-guest-accounts/csv-1.png)
 
 For the action parameters, in the *From* box add a dynamic value and select the guestList array. That's all the action needs to create a CSV table. You can change the "Column" header names under Advanced settings, but for now leave them as the defaults. It will automatically use the keys in the array ("Group", "User", "Email") as the column header names. You can always change the key names if you prefer different headers.
 
@@ -200,7 +199,7 @@ In this example we hardcode the recipient. You can instead add another trigger i
 
 Add the **Send an email (V2)** action as the very last action in the flow. There are multiple connectors that allow you to send an email; the one shown here is the Office 365 Outlook connector.
 
-![send-email](/assets/img/tutorials/find-guest-accounts/send-email.png)
+![send-email](/assets/img/posts/find-guest-accounts/send-email.png)
 
 >Note that connectors are updated over time and you may find multiple versioned actions. At the time of writing, "V2" of the Send an email action was the latest version.
 {: .prompt-info}
@@ -215,24 +214,24 @@ Please see the attached report fof guest accounts found for the SharePoint site 
 
 **Attachments**: Under *Advanced parameters* select *Attachments*.
 
-![add-item](/assets/img/tutorials/find-guest-accounts/add%20item.png)
+![add-item](/assets/img/posts/find-guest-accounts/add%20item.png)
 
 Click on **Add new item**. In the **Name** field provide a name for the attachment. Make sure it ends with *.csv*; for example, `GuestReport.csv`.
 
 For the **Content** add a dynamic value and select the output of the **Create CSV table** action.
 
-![csv-table-output](/assets/img/tutorials/find-guest-accounts/csv-input.png)
+![csv-table-output](/assets/img/posts/find-guest-accounts/csv-input.png)
 
 It should look like this
 
-![email-done](/assets/img/tutorials/find-guest-accounts/email-done.png)
+![email-done](/assets/img/posts/find-guest-accounts/email-done.png)
 
 ## Testing the flow
 
 Save and test the flow. Provide the trigger with the URL of a SharePoint site that you have access to (preferably Site Collection Admin or Owner access) and one that has known guest accounts in its SharePoint groups. The flow should run and send you an email with a CSV attachment that contains all the guest accounts on the site.
 
-![email](/assets/img/tutorials/find-guest-accounts/email-blur.png)
+![email](/assets/img/posts/find-guest-accounts/email-blur.png)
 
 Here is what the report looks like
 
-![email-report](/assets/img/tutorials/find-guest-accounts/email-report-blur.png)
+![email-report](/assets/img/posts/find-guest-accounts/email-report-blur.png)
